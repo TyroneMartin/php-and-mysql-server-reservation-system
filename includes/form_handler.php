@@ -3,6 +3,24 @@ require_once 'config.php';
 require_once 'database.php';
 require_once 'functions.php';
 
+session_start();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        die('CSRF token validation failed');
+    }
+}
+$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+
+session_start();
+if (!isset($_SESSION['last_request'])) {
+    $_SESSION['last_request'] = time();
+} else {
+    if (time() - $_SESSION['last_request'] < 1) { // 1 second minimum
+        die('Too many requests');
+    }
+    $_SESSION['last_request'] = time();
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Sanitize inputs

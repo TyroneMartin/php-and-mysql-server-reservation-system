@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'your-vendor/hotel-reservation-system',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '5f576b28b7bfbd48e9502525c2b54e534e87afae',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'your-vendor/hotel-reservation-system' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '5f576b28b7bfbd48e9502525c2b54e534e87afae',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

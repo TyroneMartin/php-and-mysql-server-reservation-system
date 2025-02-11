@@ -2,7 +2,7 @@
 RewriteEngine On
 
 # Base directory (change if your project is in a subdirectory)
-RewriteBase /php-and-mysql-server-reservation-system/
+RewriteBase /php-and-mysql-server-reservation-system/public/
 
 # Redirect all requests to index.php except for existing files/directories
 RewriteCond %{REQUEST_FILENAME} !-f

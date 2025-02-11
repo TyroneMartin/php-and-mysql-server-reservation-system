@@ -1,4 +1,5 @@
--- Create the database
+-- Drop and recreate the database
+DROP DATABASE IF EXISTS hotel_reservation;
 CREATE DATABASE hotel_reservation;
 USE hotel_reservation;
 
@@ -21,7 +22,7 @@ CREATE TABLE addresses (
     state VARCHAR(50),
     postal_code VARCHAR(20),
     country VARCHAR(50) NOT NULL,
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE
 );
 
 -- Reservations table
@@ -35,5 +36,9 @@ CREATE TABLE reservations (
     special_requests TEXT,
     status VARCHAR(20) DEFAULT 'pending',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE
 );
+
+ALTER TABLE customers ADD INDEX idx_email (email);
+ALTER TABLE reservations ADD INDEX idx_dates (check_in_date, check_out_date);
+ALTER TABLE reservations ADD INDEX idx_status (status);
