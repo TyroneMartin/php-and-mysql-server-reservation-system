@@ -1,0 +1,46 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Base directory (change if your project is in a subdirectory)
+RewriteBase /php-and-mysql-server-reservation-system/
+
+# Redirect all requests to index.php except for existing files/directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Security Headers
+Header set X-Content-Type-Options "nosniff"
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Disable directory listing
+Options -Indexes
+
+# Protect files and directories from browsing
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Deny access to sensitive files
+<FilesMatch "\.(env|config.php|composer.json|composer.lock|package.json|package-lock.json|git.*|htaccess|log|sql)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# PHP settings
+php_flag display_errors off
+php_value max_execution_time 30
+php_value max_input_time 60
+php_value max_input_vars 1000
+php_value memory_limit 128M
+php_value post_max_size 8M
+php_value upload_max_filesize 2M
+php_flag session.cookie_httponly on
+
+# Custom error pages
+# ErrorDocument 404 /404.html
+# ErrorDocument 403 /403.html
+# ErrorDocument 500 /500.html
