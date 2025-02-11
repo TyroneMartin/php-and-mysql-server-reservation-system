@@ -13,12 +13,12 @@ hotel-reservation-system/
 ├── public/
 │   ├── index.php
 │   ├── .htaccess
-│   └── assets/
-│       ├── css/
+│   └── assets/             # Static files - Not yet implemented in this project
+│       ├── css/            
 │       │   └── main.css
-│       ├── js/
+│       ├── js/           
 │       │   └── main.js
-│       └── images/
+│       └── images/        
 │
 ├── includes/
 │   ├── config.php
