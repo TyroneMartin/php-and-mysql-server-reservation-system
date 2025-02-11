@@ -3,7 +3,7 @@
         'name' => 'your-vendor/hotel-reservation-system',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '97b2e1ff7df6af47fafa1adb1f46589f73a4834a',
+        'reference' => '769b2a6446b7ea07e79cfc33d6730f2af90ab535',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -67,7 +67,7 @@
         'your-vendor/hotel-reservation-system' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '97b2e1ff7df6af47fafa1adb1f46589f73a4834a',
+            'reference' => '769b2a6446b7ea07e79cfc33d6730f2af90ab535',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

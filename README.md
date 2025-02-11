@@ -4,7 +4,7 @@
 A simple web-based hotel reservation system built with PHP and MySQL.
 
 ### Demo
-[Software Demo Video](https://www.youtube.com/watch?v=IhvRmVNLuqM)
+[Software Demo Video](https://youtu.be/80qK6fO844k)
 
 ### Project Structure
 ```
