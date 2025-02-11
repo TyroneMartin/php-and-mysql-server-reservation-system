@@ -146,4 +146,4 @@ Development tools:
 
 ## Time Spent
 
-* 20 hours
+* 25-30 hours
