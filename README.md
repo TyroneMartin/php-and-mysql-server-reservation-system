@@ -90,6 +90,10 @@ If MySQL won't start due to port conflicts:
      DB_HOST=localhost:3307
      ```
 
+3. If you are getting a 404 or page not found error:
+   - Move the project folder into the XAMPP `htdocs` directory.
+   - Alternatively, you can also create a virtual host mapping in XAMPP to specify the correct project location.
+
 ## Development Environment
 
 - XAMPP/WAMP/MAMP - Local development server
